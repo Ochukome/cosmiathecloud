@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  
+  <title>Contact Us | Cosmia The Cloud</title>
+  
+  <meta name="description" content="Ready to start your project? Contact Cosmia The Cloud for digital marketing and storytelling strategies. Let's build something that matters.">
+  <meta name="keywords" content="Contact Cosmia, Creative Agency, Digital Marketing, Storytelling, Advertising, Brand Strategy">
+  <meta name="author" content="Cosmia The Cloud">
+
+  <meta property="og:title" content="Contact Cosmia The Cloud">
+  <meta property="og:description" content="Got a brand that needs a voice? Start a revolution with us today.">
+  <meta property="og:image" content="CLOUD LOGO PNG.png">
+  <meta property="og:url" content="https://cosmiathecloud.com/contact.html">
+  <meta property="og:type" content="website">
+  
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+  <script src="script.js" defer></script>
+</head>
+
+<body class="contact-page-body">
+  
+  <div class="noise-overlay"></div>
+  <div class="bg-text-layer"><span>LET'S TALK</span><span>PROJECTS</span></div>
+
+  <div class="container relative-z">
+    <header class="header" role="banner">
+      <div class="brand">
+        <img src="CLOUD LOGO PNG.png" alt="Cosmia The Cloud Logo" class="logo">
+        <a class="site-name" href="index.html">Cosmia The Cloud</a> </div>
+
+      <button class="hamburger" aria-label="Toggle menu">
+        <i class="fas fa-bars"></i>
+      </button>
+
+      <nav class="navlinks" role="navigation">
+        <a href="index.html">Home</a>
+        <a href="creativecon.html">Creative Con</a>
+        <a href="contact.html" class="active">Contact</a>
+        <button class="btn-nav btn-subscribe">Subscribe</button>
+      </nav>
+    </header>
+
+    <div class="creative-contact-layout">
+        <div class="contact-hook">
+            <h1>Start A<br><span style="color:var(--yellow)">Revolution.</span></h1>
+            <p>Got a brand that needs a voice? A project that needs a soul? Let's build something that matters.</p>
+            
+            <a href="mailto:hello@cosmiathecloud.com" class="giant-email">hello@cosmiathecloud.com</a>
+            
+            <div class="minimal-socials">
+                <a href="#">INSTAGRAM</a> &nbsp;/&nbsp; <a href="#">LINKEDIN</a> &nbsp;/&nbsp; <a href="#">TWITTER</a>
+            </div>
+        </div>
+
+        <div class="glass-form-wrapper">
+            <form class="innovative-form">
+                <div class="input-group">
+                    <input type="text" required>
+                    <label>Your Name</label>
+                    <span class="bar"></span>
+                </div>
+                
+                <div class="input-group">
+                    <input type="email" required>
+                    <label>Email Address</label>
+                    <span class="bar"></span>
+                </div>
+
+                <div class="input-group">
+                    <select required>
+                        <option value="" disabled selected></option>
+                        <option value="branding">Branding & Identity</option>
+                        <option value="marketing">Marketing Strategy</option>
+                        <option value="advertising">Advertising Campaign</option>
+                        <option value="creativecon">Creative Con Sponsorship</option>
+                        <option value="other">Other</option>
+                    </select>
+                    <label>Project Type</label>
+                    <span class="bar"></span>
+                </div>
+                
+                <div class="input-group">
+                    <textarea rows="4" required></textarea>
+                    <label>Tell us about the dream...</label>
+                    <span class="bar"></span>
+                </div>
+
+                <button type="submit" class="btn-submit-innovative">SEND MESSAGE</button>
+            </form>
+        </div>
+    </div>
+  </div>
+
+  <section class="mega-contact-footer" style="position: relative; z-index: 2;">
+    <div class="footer-content-wrapper">
+      <div class="contact-details">
+        <h3>Cosmia The Cloud</h3> <p>Building a Community, Telling Your Story.</p>
+        <div class="detail-group">
+          <i class="fas fa-envelope icon"></i>
+          <a href="mailto:hello@cosmiathecloud.com">hello@cosmiathecloud.com</a>
+        </div>
+        <div class="detail-group">
+          <i class="fas fa-map-marker-alt icon"></i>
+          <span>Ekpoma, Edo State</span>
+        </div>
+      </div>
+      
+      <div class="social-links">
+        <h3>Follow the Movement</h3>
+        <div class="social-icons">
+          <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a> 
+          <a href="#" aria-label="Twitter"><i class="fab fa-x-twitter"></i></a>
+        </div>
+        <nav class="footer-nav">
+          <a href="index.html">Home</a>
+          <a href="creativecon.html">Creative Con</a>
+          <a href="contact.html">Start a Project</a>
+        </nav>
+      </div>
+    </div>
+  </section>
+
+  <footer class="final-footer" role="contentinfo">
+    <div>© <span id="year"></span> Cosmia The Cloud</div> </footer>
+
+  <div id="subscribe-modal-overlay" class="contact-modal-overlay">
+    <div class="contact-modal-content">
+      <button class="modal-close-btn" aria-label="Close modal">&times;</button>
+      <h2 class="modal-title">Join The Cloud</h2>
+      <p>Subscribe for stories, agency insights, and Creative Con '25 updates.</p>
+      <form id="modal-subscribe-form" class="subscribe" style="margin-top:12px; display:flex; flex-direction:column; gap:15px;">
+        <input type="email" placeholder="you@company.com" required>
+        <button class="btn-primary btn-submit" type="submit" style="width:100%">Subscribe Now</button>
+      </form>
+    </div>
+  </div>
+</body>
+</html>
