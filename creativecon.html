@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Cosmia Creator Con — The Creative Cloud</title>
 
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
@@ -17,25 +19,27 @@
   
   <div class="noise-overlay"></div>
 
+  <header class="header" role="banner">
+    <div class="brand">
+      <img src="CLOUD LOGO PNG.png" alt="Cosmia Logo" class="logo">
+      <a class="site-name" href="index.html">The Creative Cloud</a>
+    </div>
+
+    <button class="hamburger" aria-label="Toggle menu">
+      <i class="fas fa-bars"></i>
+    </button>
+
+    <nav class="navlinks" role="navigation">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="creativecon.html" class="active">Creative Con</a>
+      <a href="community.html">Community</a>
+      <button class="btn-nav trigger-contact-modal">Subscribe</button>
+    </nav>
+  </header>
+
   <div class="container" style="position: relative; z-index: 2;">
-    <header class="header" role="banner">
-      <div class="brand">
-  <img src="CLOUD LOGO PNG.png" alt="Cosmia Logo" class="logo">
-  <a class="site-name" href="index.html">The Creative Cloud</a>
-</div>
-
-      <button class="hamburger" aria-label="Toggle menu">
-        <i class="fas fa-bars"></i>
-      </button>
-
-      <nav class="navlinks" role="navigation">
-        <a href="index.html">Home</a>
-        <a href="creativecon.html">Creative Con</a>
-        <a href="contact.html">Contact</a>
-        <button class="btn-nav btn-subscribe">Subscribe</button>
-      </nav>
-    </header>
-
+    
     <section class="con-hero-section">
         <div class="con-hero-text">
             <span class="con-tagline">Dare. Ignite. Yours.</span>
@@ -157,7 +161,7 @@
         <p>Igniting the Creative Con.</p>
         <div class="detail-group">
           <i class="fas fa-envelope icon"></i>
-          <a href="mailto:hello@creativecloud.com">hello@creativecloud.com</a>
+          <a href="mailto:hello@cosmiathecloud.com">hello@cosmiathecloud.com</a>
         </div>
         <div class="detail-group">
             <i class="fas fa-map-marker-alt icon"></i>
@@ -185,14 +189,48 @@
     <div>© <span id="year"></span> The Creative Cloud</div>
   </footer>
 
-  <div id="subscribe-modal-overlay" class="contact-modal-overlay">
-    <div class="contact-modal-content">
-      <button class="modal-close-btn" aria-label="Close modal">&times;</button>
-      <h2 class="modal-title">Join The Cloud</h2>
-      <p>Subscribe for stories, agency insights, and Creative Con '25 updates.</p>
-      <form id="modal-subscribe-form" class="subscribe" style="margin-top:12px; display:flex; flex-direction:column; gap:15px;">
-        <input type="email" placeholder="you@company.com" required>
-        <button class="btn-primary btn-submit" type="submit" style="width:100%">Subscribe Now</button>
+  <div id="contact-modal-overlay" class="contact-modal-overlay">
+    <div class="glass-form-wrapper" style="position: relative; max-width: 500px; margin: 20px;">
+      
+      <button id="close-contact-modal" class="modal-close-btn" style="top: 20px; right: 20px;">&times;</button>
+      
+      <h2 style="color: var(--white); margin-top: 0; margin-bottom: 10px;">Get in Touch</h2>
+      <p style="color: rgba(255,255,255,0.7); margin-bottom: 30px; font-size: 14px;">
+        Got a brand that needs a voice? Let's build something that matters.
+      </p>
+
+      <form>
+        <div class="input-group">
+          <input type="text" required>
+          <label>Your Name</label>
+          <span class="bar"></span>
+        </div>
+
+        <div class="input-group">
+          <input type="email" required>
+          <label>Email Address</label>
+          <span class="bar"></span>
+        </div>
+
+        <div class="input-group">
+          <select required>
+            <option value="" disabled selected></option>
+            <option value="branding">Branding</option>
+            <option value="marketing">Marketing</option>
+            <option value="advertising">Advertising</option>
+            <option value="other">Other</option>
+          </select>
+          <label>Project Type</label>
+          <span class="bar"></span>
+        </div>
+
+        <div class="input-group">
+          <textarea rows="2" required></textarea>
+          <label>Tell us your story...</label>
+          <span class="bar"></span>
+        </div>
+
+        <button type="submit" class="btn-submit-innovative">Send Message</button>
       </form>
     </div>
   </div>
