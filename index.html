@@ -2,8 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Cosmia The Cloud | Strategic Storytelling & Creative Marketing</title>
   
   <link rel="icon" href="favicon.ico" type="image/x-icon">
@@ -11,6 +10,8 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"></script>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
@@ -86,33 +87,28 @@
                 <h4>Branding</h4>
                 <p>Every brand has a story. We help you define yours and keep it consistent across everything you do, ensuring your first impression is the right impression.</p>
               </div>
-              
               <div class="service" data-tilt>
                 <div class="service-letter">M</div>
                 <h4>Marketing</h4>
                 <p>You don’t own a product or service, you own a solution to people’s problems. We tell your story, make your customers see that problem and want your solution.</p>
                 <span class="ribbon-tag">Growth</span>
               </div>
-              
               <div class="service" data-tilt>
                 <div class="service-letter">A</div>
                 <h4>Advertising</h4>
                 <p>Stories are only loved if they are seen and heard, we make sure yours is.</p>
               </div>
-
               <div class="service" data-tilt>
                 <div class="service-letter">B</div>
                 <h4>Branding</h4>
                 <p>Every brand has a story. We help you define yours and keep it consistent across everything you do, ensuring your first impression is the right impression.</p>
               </div>
-              
               <div class="service" data-tilt>
                 <div class="service-letter">M</div>
                 <h4>Marketing</h4>
                 <p>You don’t own a product or service, you own a solution to people’s problems. We tell your story, make your customers see that problem and want your solution.</p>
                 <span class="ribbon-tag">Growth</span>
               </div>
-              
               <div class="service" data-tilt>
                 <div class="service-letter">A</div>
                 <h4>Advertising</h4>
@@ -123,6 +119,82 @@
             <button class="scroll-btn next-btn" onclick="scrollServices('next')"><i class="fas fa-chevron-right"></i></button>
         </div>
     </div>
+
+    <section class="what-we-offer" style="margin-top: 80px;">
+        <h2 class="section-title" style="text-align:center; color:var(--purple);">What We Offer</h2>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; margin-top: 40px;">
+            
+            <div style="background: white; padding: 30px; border-radius: 16px; border-left: 4px solid var(--purple); box-shadow: 0 5px 20px rgba(0,0,0,0.05);">
+                <h3 style="color: var(--purple); margin-top: 0;">Branding</h3>
+                <ul style="padding-left: 20px; color: #555; line-height: 1.8;">
+                    <li>Logo Design</li>
+                    <li>Brand Design</li>
+                    <li>Visual Identity Design</li>
+                </ul>
+            </div>
+
+            <div style="background: white; padding: 30px; border-radius: 16px; border-left: 4px solid var(--yellow); box-shadow: 0 5px 20px rgba(0,0,0,0.05);">
+                <h3 style="color: var(--purple); margin-top: 0;">Marketing Strategies</h3>
+                <ul style="padding-left: 20px; color: #555; line-height: 1.8;">
+                    <li>Brand Consultations & Clarity Call</li>
+                    <li>Social Media Marketing Strategies</li>
+                </ul>
+            </div>
+
+            <div style="background: white; padding: 30px; border-radius: 16px; border-left: 4px solid var(--green); box-shadow: 0 5px 20px rgba(0,0,0,0.05);">
+                <h3 style="color: var(--purple); margin-top: 0;">Advertising</h3>
+                <ul style="padding-left: 20px; color: #555; line-height: 1.8;">
+                    <li>Still & Motion Graphic Design</li>
+                    <li>Animation</li>
+                    <li>Illustrations</li>
+                </ul>
+            </div>
+
+            <div style="background: white; padding: 30px; border-radius: 16px; border-left: 4px solid var(--pink); box-shadow: 0 5px 20px rgba(0,0,0,0.05);">
+                <h3 style="color: var(--purple); margin-top: 0;">Digital Solutions</h3>
+                <ul style="padding-left: 20px; color: #555; line-height: 1.8;">
+                    <li>Short form content (Reels/Short Films)</li>
+                    <li>Storytelling Strategy</li>
+                </ul>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="portfolio-section" style="margin-top: 100px; text-align: center;">
+        <h2 class="section-title" style="color:var(--purple);">Selected Work</h2>
+        <p style="color: #555; margin-bottom: 40px;">Visual stories that moved people to action.</p>
+        
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px;">
+            <div class="portfolio-card" data-tilt style="position: relative; height: 350px; border-radius: 20px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
+                <img src="https://images.unsplash.com/photo-1600607686527-6fb886090705?q=80&w=2000&auto=format&fit=crop" alt="Project 1" style="width: 100%; height: 100%; object-fit: cover;">
+                <div style="position: absolute; bottom: 0; left: 0; width: 100%; padding: 20px; background: rgba(59, 4, 88, 0.85); color: white; backdrop-filter: blur(5px); transform: translateY(100%); transition: transform 0.3s ease;" class="portfolio-overlay">
+                    <h4 style="margin: 0; color: var(--yellow);">Brand Identity</h4>
+                    <p style="margin: 5px 0 0; font-size: 14px;">Local Bakery Rebrand</p>
+                </div>
+            </div>
+
+            <div class="portfolio-card" data-tilt style="position: relative; height: 350px; border-radius: 20px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
+                <img src="https://images.unsplash.com/photo-1557804506-669a67965ba0?q=80&w=2000&auto=format&fit=crop" alt="Project 2" style="width: 100%; height: 100%; object-fit: cover;">
+                <div style="position: absolute; bottom: 0; left: 0; width: 100%; padding: 20px; background: rgba(59, 4, 88, 0.85); color: white; backdrop-filter: blur(5px); transform: translateY(100%); transition: transform 0.3s ease;" class="portfolio-overlay">
+                    <h4 style="margin: 0; color: var(--yellow);">Social Media Strategy</h4>
+                    <p style="margin: 5px 0 0; font-size: 14px;">Tech Startup Campaign</p>
+                </div>
+            </div>
+
+            <div class="portfolio-card" data-tilt style="position: relative; height: 350px; border-radius: 20px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
+                <img src="https://images.unsplash.com/photo-1626785774573-4b7993143a23?q=80&w=2000&auto=format&fit=crop" alt="Project 3" style="width: 100%; height: 100%; object-fit: cover;">
+                <div style="position: absolute; bottom: 0; left: 0; width: 100%; padding: 20px; background: rgba(59, 4, 88, 0.85); color: white; backdrop-filter: blur(5px); transform: translateY(100%); transition: transform 0.3s ease;" class="portfolio-overlay">
+                    <h4 style="margin: 0; color: var(--yellow);">Motion Graphics</h4>
+                    <p style="margin: 5px 0 0; font-size: 14px;">Product Launch Animation</p>
+                </div>
+            </div>
+        </div>
+        
+        <style>
+            .portfolio-card:hover .portfolio-overlay { transform: translateY(0) !important; }
+        </style>
+    </section>
 
     <section class="event-card creative-con-promo">
       <div>
@@ -145,11 +217,8 @@
     <section class="about-grid" id="about">
       <div class="writeup">
         <h2>About Cosmia: The Creative Cloud</h2> 
-        
         <p>Cosmia is a forward-thinking BMA Agency that grows businesses through storytelling and community. We combine <strong>Branding, Marketing, and Advertising</strong> to help you stand out, drive sales, and connect deeply with your audience.</p>
-        
         <a href="about.html" style="color:var(--purple); font-weight:700; text-decoration: none;">Read More &rarr;</a>
-
         <div class="aim-box" data-tilt>
             <h3>Our Aim</h3>
             <p>To empower businesses through creative storytelling, while fostering a community of innovative thinkers. Cosmia connects brands with talented creatives, delivering exceptional branding, marketing, and advertising solutions.</p>
@@ -219,6 +288,43 @@
   <footer class="final-footer" role="contentinfo">
     <div>© <span id="year"></span> Cosmia The Cloud</div> 
   </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+
+  <button id="back-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'});" style="
+    position: fixed; 
+    bottom: 30px; 
+    right: 30px; 
+    background: var(--purple); 
+    color: var(--white); 
+    border: none; 
+    border-radius: 50%; 
+    width: 50px; 
+    height: 50px; 
+    font-size: 20px; 
+    cursor: pointer; 
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3); 
+    z-index: 9999; 
+    display: none; 
+    align-items: center; 
+    justify-content: center;
+    transition: transform 0.3s;
+  ">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <script>
+    window.onscroll = function() {
+        var btn = document.getElementById("back-to-top");
+        if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+            btn.style.display = "flex";
+        } else {
+            btn.style.display = "none";
+        }
+    };
+  </script>
 
   <div id="contact-modal-overlay" class="contact-modal-overlay">
     <div class="glass-form-wrapper" style="position: relative; max-width: 500px; margin: 20px;">

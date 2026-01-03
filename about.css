@@ -1,5 +1,5 @@
 /* =========================================
-   ABOUT PAGE STYLING
+   ABOUT PAGE STYLING (RESPONSIVE FIX)
    ========================================= */
 
 /* Inherit variables from style.css, but redefining here for safety */
@@ -11,12 +11,15 @@
   --white: #FFFFFF;
   --off-white: #f7f7f5; 
   --muted: #333333;
+  --ff-sans: 'Poppins', system-ui, -apple-system, sans-serif;
 }
 
 .about-page-body {
     background-color: var(--off-white);
     color: var(--muted);
-    font-family: 'Poppins', sans-serif;
+    font-family: var(--ff-sans);
+    overflow-x: hidden; /* Safety against horizontal scroll */
+    width: 100%;
 }
 
 /* --- HERO SECTION --- */
@@ -28,7 +31,8 @@
 }
 
 .about-hero h1 {
-    font-size: 64px;
+    /* FIX: Fluid font size (36px mobile -> 64px desktop) */
+    font-size: clamp(36px, 8vw, 64px);
     line-height: 1.1;
     margin-bottom: 20px;
     color: #111;
@@ -43,20 +47,16 @@
 .highlight-purple::after {
     content: '';
     position: absolute;
-    bottom: 5px;
-    left: 0;
-    width: 100%;
-    height: 8px;
-    background: var(--yellow);
-    z-index: -1;
-    opacity: 0.6;
-    transform: rotate(-2deg);
+    bottom: 5px; left: 0; width: 100%; height: 8px;
+    background: var(--yellow); z-index: -1;
+    opacity: 0.6; transform: rotate(-2deg);
 }
 
 .lead-text {
     font-size: 20px;
     line-height: 1.6;
     color: #555;
+    padding: 0 10px; /* Safety padding */
 }
 
 /* --- MEANING CARDS (Greek/Latin/Botany) --- */
@@ -67,7 +67,8 @@
 
 .meaning-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    /* FIX: Adjusted min-width to 260px to fit smaller phones better */
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     gap: 30px;
     margin-top: 40px;
 }
@@ -81,14 +82,9 @@
     transition: transform 0.3s;
 }
 
-.meaning-card:hover {
-    transform: translateY(-10px);
-}
+.meaning-card:hover { transform: translateY(-10px); }
 
-.meaning-card .icon {
-    font-size: 40px;
-    margin-bottom: 20px;
-}
+.meaning-card .icon { font-size: 40px; margin-bottom: 20px; }
 
 .meaning-card h3 {
     color: var(--purple);
@@ -114,41 +110,25 @@
     align-items: center;
 }
 
-.highlight-yellow {
-    color: var(--yellow);
-}
+.highlight-yellow { color: var(--yellow); }
 
-.bma-checklist {
-    list-style: none;
-    padding: 0;
-    margin-top: 30px;
-}
+.bma-checklist { list-style: none; padding: 0; margin-top: 30px; }
 
 .bma-checklist li {
     font-size: 18px;
     margin-bottom: 15px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
+    display: flex; align-items: center; gap: 10px;
 }
 
-.bma-checklist i {
-    color: var(--green);
-}
+.bma-checklist i { color: var(--green); }
 
-.bma-right {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
+.bma-right { display: flex; flex-direction: column; gap: 20px; }
 
 .bma-box {
     background: rgba(255,255,255,0.1);
     padding: 20px;
     border-radius: 15px;
-    display: flex;
-    align-items: center;
-    gap: 20px;
+    display: flex; align-items: center; gap: 20px;
     border: 1px solid rgba(255,255,255,0.1);
 }
 
@@ -157,11 +137,9 @@
     font-weight: 900;
     color: var(--yellow);
     background: rgba(0,0,0,0.2);
-    width: 60px;
+    min-width: 60px; /* Use min-width so it doesn't squash */
     height: 60px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display: flex; justify-content: center; align-items: center;
     border-radius: 10px;
 }
 
@@ -169,14 +147,11 @@
 .bma-box p { margin: 0; font-size: 14px; opacity: 0.8; }
 
 /* --- SYNERGY SECTION --- */
-.synergy-section {
-    text-align: center;
-    margin: 80px 0;
-}
+.synergy-section { text-align: center; margin: 80px 0; }
 
 .synergy-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 30px;
     margin-top: 40px;
 }
@@ -190,11 +165,7 @@
     box-shadow: 0 5px 20px rgba(0,0,0,0.05);
 }
 
-.synergy-card h4 {
-    color: var(--purple);
-    font-size: 22px;
-    margin-bottom: 10px;
-}
+.synergy-card h4 { color: var(--purple); font-size: 22px; margin-bottom: 10px; }
 
 /* --- COMMUNITY BANNER --- */
 .community-banner {
@@ -207,7 +178,8 @@
 }
 
 .community-content h2 {
-    font-size: 40px;
+    /* FIX: Fluid font size */
+    font-size: clamp(28px, 5vw, 40px);
     color: var(--purple);
 }
 
@@ -233,16 +205,16 @@
 
 .team-member {
     text-align: center;
-    width: 250px;
+    width: 100%;
+    max-width: 250px; /* Allows shrinking */
 }
 
 .member-photo {
-    width: 150px;
-    height: 150px;
-    background: #ddd;
-    border-radius: 50%;
+    width: 150px; height: 150px;
+    background: #ddd; border-radius: 50%;
     margin: 0 auto 20px;
     border: 4px solid var(--yellow);
+    object-fit: cover;
 }
 
 .team-member h4 { margin: 0; color: var(--purple); font-size: 20px; }
@@ -256,33 +228,18 @@
     margin-bottom: 80px;
 }
 
-.mv-box {
-    padding: 50px;
-    border-radius: 20px;
-}
+.mv-box { padding: 50px; border-radius: 20px; }
 
-.mission {
-    background: var(--purple);
-    color: var(--white);
-}
+.mission { background: var(--purple); color: var(--white); }
 .mission h3 { color: var(--green); margin-top: 0; }
 
-.vision {
-    background: var(--white);
-    border: 2px solid var(--purple);
-    color: var(--muted);
-}
+.vision { background: var(--white); border: 2px solid var(--purple); color: var(--muted); }
 .vision h3 { color: var(--purple); margin-top: 0; }
 
 /* --- FINAL CTA --- */
-.final-cta {
-    margin-bottom: 100px;
-}
+.final-cta { margin-bottom: 100px; }
 
-.cta-split {
-    display: flex;
-    gap: 20px;
-}
+.cta-split { display: flex; gap: 20px; }
 
 .cta-col {
     flex: 1;
@@ -291,22 +248,53 @@
     text-align: center;
 }
 
-.client {
-    background: var(--off-white);
-    border: 1px solid #ddd;
-}
+.client { background: var(--off-white); border: 1px solid #ddd; }
+.creative { background: var(--purple); color: white; }
 
-.creative {
-    background: var(--purple);
-    color: white;
-}
-
-/* --- RESPONSIVE --- */
+/* --- RESPONSIVE FIXES --- */
 @media (max-width: 900px) {
-    .about-hero h1 { font-size: 40px; }
-    .bma-container { grid-template-columns: 1fr; }
-    .mv-section { grid-template-columns: 1fr; }
-    .cta-split { flex-direction: column; }
-    .values-list { font-size: 14px; line-height: 2; }
-    .bma-section { padding: 40px 20px; }
+    /* 1. Global Spacing Reduction */
+    .about-hero, .meaning-section, .synergy-section, .team-section, .final-cta {
+        padding-top: 40px;
+        padding-bottom: 40px;
+        margin: 40px 0;
+    }
+    
+    /* 2. Hero Adjustments */
+    .about-hero { padding: 40px 20px; }
+
+    /* 3. BMA Section Mobile Layout */
+    .bma-section { 
+        margin: 40px 0; 
+        padding: 40px 20px; 
+        border-radius: 20px; /* Smaller radius for mobile */
+    }
+    .bma-container { grid-template-columns: 1fr; gap: 30px; }
+    
+    .bma-box {
+        flex-direction: column; /* Stack icon on top of text */
+        text-align: center;
+        padding: 20px;
+    }
+    
+    /* 4. Layout Stacking */
+    .mv-section { grid-template-columns: 1fr; gap: 20px; }
+    .mv-box { padding: 30px; }
+    
+    .cta-split { flex-direction: column; gap: 20px; }
+    .cta-col { padding: 40px 20px; }
+    
+    .community-banner { 
+        padding: 40px 20px; 
+        margin: 40px 0; 
+    }
+    
+    /* 5. Font Adjustments */
+    .values-list { 
+        font-size: 14px; 
+        line-height: 2; 
+        display: flex; 
+        flex-direction: column; 
+        gap: 10px;
+    }
 }
